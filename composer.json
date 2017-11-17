@@ -1,0 +1,26 @@
+{
+  "name": "sle/cli-colored-string",
+  "description": "This library offers the ability to make colored cli strings.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Steve Lenz",
+      "email": "kontakt@steve-lenz.de"
+    }
+  ],
+  "keywords": [
+    "php",
+    "color",
+    "cli",
+    "string"
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sle\\CliColoredString\\": "src"
+    }
+  }
+}
