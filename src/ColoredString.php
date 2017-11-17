@@ -63,7 +63,7 @@ class ColoredString
             $coloredString .= "\033[" . static::$foregroundColors[$foregroundColor] . "m";
         }
         // Check if given background color found
-        if (isset(self::$backgroundColors[$backgroundColor])) {
+        if (array_key_exists($backgroundColor, self::$backgroundColors)) {
             $coloredString .= "\033[" . static::$backgroundColors[$backgroundColor] . "m";
         }
 
