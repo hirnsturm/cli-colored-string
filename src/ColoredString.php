@@ -56,21 +56,21 @@ class ColoredString
      */
     public static function get($string, $foregroundColor = null, $backgroundColor = null)
     {
-        $colored_string = "";
+        $coloredString = "";
 
         // Check if given foreground color found
         if (array_key_exists($foregroundColor, static::$foregroundColors)) {
-            $colored_string .= "\033[" . static::$foregroundColors[$foregroundColor] . "m";
+            $coloredString .= "\033[" . static::$foregroundColors[$foregroundColor] . "m";
         }
         // Check if given background color found
         if (isset(self::$backgroundColors[$backgroundColor])) {
-            $colored_string .= "\033[" . static::$backgroundColors[$backgroundColor] . "m";
+            $coloredString .= "\033[" . static::$backgroundColors[$backgroundColor] . "m";
         }
 
         // Add string and end coloring
-        $colored_string .= $string . "\033[0m";
+        $coloredString .= $string . "\033[0m";
 
-        return $colored_string;
+        return $coloredString;
     }
 
     /**
